@@ -9,7 +9,7 @@ node (label: 'TN_HtmlNginx_App'){
 
     stage('Build Docker image') {
   
-       app = docker.build("34.174.116.217:8085/repository/primary-argocd:${env.BUILD_NUMBER}")
+       app = docker.build("eagunuworld/primary-argocd:${env.BUILD_NUMBER}")
     }
 
     stage('Test Docker image') {
@@ -21,7 +21,7 @@ node (label: 'TN_HtmlNginx_App'){
     }
 
     stage('Push image to Nexus') {
-        sh 'docker login -u admin -p passw0rd http://34.174.116.217:8085/repository/primary-argocd/'
+        sh 'docker login -u eagunuworld -p Aighegbe12345@ eagunuworld/primary-argocd'
             app.push("${env.BUILD_NUMBER}")
     }
     stage('Trigger Update Manifest') {
