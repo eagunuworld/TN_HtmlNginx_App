@@ -9,7 +9,7 @@ node (label: 'TN_HtmlNginx_App'){
 
     stage('Build Docker image') {
   
-       app = docker.build("http://34.174.116.217:8585/repository/primary-argocd:${env.BUILD_NUMBER}")
+       app = docker.build("34.174.116.217:8585/repository/primary-argocd:${env.BUILD_NUMBER}")
     }
 
     stage('Test Docker image') {
