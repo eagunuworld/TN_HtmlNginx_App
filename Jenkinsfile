@@ -1,6 +1,6 @@
 pipeline {
    agent{
-      label "BI_NumericDemo_App"
+      label "TN_HtmlNginx_App"
        }
 
     // def app
