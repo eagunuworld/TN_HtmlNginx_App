@@ -17,7 +17,7 @@ pipeline {
    environment {
             // DEPLOY = "${env.BRANCH_NAME == "python-dramed" || env.BRANCH_NAME == "master" ? "true" : "false"}"
             // NAME = "${env.BRANCH_NAME == "python-dramed" ? "example" : "example-staging"}"
-            // VERSION = "${env.BUILD_ID}"
+            VERSION = "${env.BUILD_ID}"
             REGISTRY = 'eagunuworld/primary-argocd'
             imageName = "eagunuworld/primary-argocd:${BUILD_ID}"
             REGISTRY_CREDENTIAL = 'eagunuworld_dockerhub_creds'
