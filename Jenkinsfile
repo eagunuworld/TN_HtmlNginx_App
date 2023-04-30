@@ -60,11 +60,12 @@ pipeline {
 //     }
 
  
-//   stage('OWASP ZAP - DAST') {
-//       steps {
-//           sh 'bash zap.sh'
-//         }
-//       }
+  stage('OWASP ZAP - DAST') {
+      steps {
+          echo "triggering Update manifest Job"
+            build job: 'sub_walmart', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
+        }
+      }
 
     }
  
