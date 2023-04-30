@@ -33,7 +33,7 @@ pipeline {
   stages {
     stage('Clone repository') {
       steps {
-        sh "checkout scm"
+        git url: 'https://github.com/eagunuworld/TN_HtmlNginx_App.git', branch: 'walmart-prod'
       }
     }
 
