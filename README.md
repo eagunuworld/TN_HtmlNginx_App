@@ -1,1 +1,1 @@
-# TN_HtmlNginx_App
+# argocd-build-image
