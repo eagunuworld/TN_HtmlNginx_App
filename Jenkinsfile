@@ -47,14 +47,17 @@ pipeline {
               }
           }
 
-    
-//  stage('Kindly Review And Approve West-Prod?') {
-//       steps {
-//         timeout(time: 2, unit: 'DAYS') {
-//           input 'Do you want to Approve the Deployment to West Production Environment/Namespace?'
-//         }
-//       }
-//     }
+    // stage("first") {
+    //         def foo = "app" // fails with "WorkflowScript: 5: Expected a step @ line 5, column 13."
+    //         sh "echo ${foo}"
+    //     }
+ stage('Test Docker image') {
+      steps {
+        app.inside  {
+          sh 'echo "Tests passed"'
+        }
+      }
+    }
 
  
 //   stage('OWASP ZAP - DAST') {
