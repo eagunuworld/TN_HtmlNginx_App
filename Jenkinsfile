@@ -26,7 +26,7 @@ node (label: 'TN_HtmlNginx_App'){
     }
     stage('Trigger Update Manifest') {
         echo "triggering Update manifest Job"
-            build job: 'argocd-update-manifest', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
+            build job: 'sub_walmart', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
     }
     
 }
