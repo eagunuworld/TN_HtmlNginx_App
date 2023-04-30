@@ -3,7 +3,7 @@ pipeline {
       label "BI_NumericDemo_App"
        }
 
-    def app
+    // def app
     //    options {
     //      buildDiscarder logRotator( artifactDaysToKeepStr: '1', artifactNumToKeepStr: '2', daysToKeepStr: '1', numToKeepStr: '2')
     //      timestamps()
@@ -51,13 +51,13 @@ pipeline {
     //         def foo = "app" // fails with "WorkflowScript: 5: Expected a step @ line 5, column 13."
     //         sh "echo ${foo}"
     //     }
- stage('Test Docker image') {
-      steps {
-        app.inside  {
-          sh 'echo "Tests passed"'
-        }
-      }
-    }
+//  stage('Test Docker image') {
+//       steps {
+//         app.inside  {
+//           sh 'echo "Tests passed"'
+//         }
+//       }
+//     }
 
  
 //   stage('OWASP ZAP - DAST') {
